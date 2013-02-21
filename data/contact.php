@@ -16,18 +16,31 @@
 
 //date_default_timezone_set('America/Los_Angeles');
 
-$form_data = $_POST['wdm_form_dataset'];
+if(isset($_POST['wdm_form_dataset']))
+{
+	$form_data = $_POST['wdm_form_dataset'];
+}
+
+if(isset($_POST['wdm_admin_email']))
+{
+	$to_adm = $_POST['wdm_admin_email'];
+}
+
+if(isset($_POST['wdm_site_name']))
+{
+	$site_name = $_POST['wdm_site_name'];
+}
 
 // User settings
 if (!empty($form_data['user_email']))
 	$to = $form_data['user_email'];
 else
-	$to = $_POST['wdm_admin_email'];
+	$to = $to_adm;
 	
 if (!empty($form_data['default_sub']))
 	$subject = $form_data['default_sub'];
 else
-	$subject = "Enquiry for a product from ".$_POST['wdm_site_name'];
+	$subject = "Enquiry for a product from ".$site_name;
 
 	
  //Include extra form fields and/or submitter data?
@@ -70,6 +83,8 @@ if (empty($action)) {
 	
 	$output .= "<input type='hidden' id='wdm_form_def_sub' class='contact-input' name='wdm_form_def_sub' value='' />";
 	
+	$output .= "<input type='hidden' id='wdm_website_name' class='contact-input' name='wdm_website_name' value='' />";
+	
 	$output .= "
 			<label for='contact-message'>*Enquiry:</label>
 			<textarea id='contact-message' class='contact-input' name='message' cols='40' rows='4' tabindex='1004'></textarea>
@@ -95,6 +110,7 @@ if (empty($action)) {
  
  $to = base64_encode($to);
  $subject = base64_encode($subject);
+ $site_name = base64_encode($site_name);
  
   echo '<script type="text/javascript">
  jQuery(document).ready(
@@ -102,6 +118,7 @@ if (empty($action)) {
 		{
 			jQuery("#wdm_form_mail_to").val("'.$to.'");
 			jQuery("#wdm_form_def_sub").val("'.$subject.'");
+			jQuery("#wdm_website_name").val("'.$site_name.'");
 			
 		}
 		);
@@ -123,10 +140,12 @@ else if ($action == "send") {
 	$token = isset($_POST["token"]) ? $_POST["token"] : "";
 	$to = isset($_POST["wdm_form_mail_to"]) ? $_POST["wdm_form_mail_to"] : "";
 	$to = base64_decode($to);
+	$site_name = isset($_POST["wdm_website_name"]) ? $_POST["wdm_website_name"] : "";
+	$site_name = base64_decode($site_name);
 	
 	// make sure the token matches
 	if ($token === smcf_token($to)) {
-		smcf_send($name, $email, $subject, $product_url, $product_name, $message, $cc);
+		smcf_send($name, $email, $subject, $product_url, $product_name, $site_name, $message, $cc);
 		echo "Your enquiry sent successfully. We will get back to you soon.";
 	}
 	else {
@@ -139,7 +158,7 @@ function smcf_token($s) {
 }
 
 // Validate and send email
-function smcf_send($name, $email, $subject, $product_url, $product_name, $message, $cc) {
+function smcf_send($name, $email, $subject, $product_url, $product_name, $site_name, $message, $cc) {
 	global $to, $extra;
 
 	// Filter and validate fields
@@ -162,11 +181,12 @@ function smcf_send($name, $email, $subject, $product_url, $product_name, $messag
 	}
 
 	// Set and wordwrap message body
-	
-	$body = "Hi, there is an enquiry for product '". $product_name ." ' here at ". $product_url ."\n\n";
-	$body .= "Customer Name: $name\n\n";
-	$body .= "Message: $message";
-	$body = wordwrap($body, 70);
+	$body = "Product Enquiry from <strong>". $site_name . "</strong> <br /><br />";
+	$body .= "<strong>Product Name:</strong> '". $product_name ."'<br /><br />";
+	$body .= "<strong>Product URL:</strong> ". $product_url ."<br /><br />";
+	$body .= "<strong>Customer Name:</strong> ". $name ."<br /><br />";
+	$body .= "<strong>Message:</strong> <br />". $message;
+	$body = wordwrap($body, 100);
 
 	// Build header
 	$headers = "From: $email\n";
@@ -184,7 +204,7 @@ function smcf_send($name, $email, $subject, $product_url, $product_name, $messag
 		// getting emails that are not UTF-8 encoded
 	}
 	$headers .= "MIME-Version: 1.0\n";
-	$headers .= "Content-type: text/plain; charset=utf-8\n";
+	$headers .= "Content-type: text/html; charset=utf-8\n";
 	$headers .= "Content-Transfer-Encoding: quoted-printable\n";
 
 	// Send email
