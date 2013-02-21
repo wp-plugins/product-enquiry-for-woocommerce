@@ -4,8 +4,8 @@ Contributors: WisdmLabs
 Tags: WisdmLabs, WooCommerce, Product Enquiry, Product Enquiry for WooCommerce, eCommerce Product Enquiry, Ask Question about a Product, WooCommerce Plugin, WooCommerce Product Plugin
 Requires at least: 3.4
 Tested up to: 3.5.1
-Version: 0.1
-Stable tag: trunk
+Version: 0.1.5
+Stable tag: 0.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Product Enquiry for WooCommerce allows prospective customers or visitors to make
 
 * Plugin user/administrator can configure where to show "Enquiry Button" on the product page and many other details too(please, see screenshot 'Plugin configuration' for more details).
 
-* An email is sent to pre-configured email address of the plugin user with details such as product name, product URL, customer name and enquiry message in a well formatted manner. Moreover, the customer can receive a copy of this email if this functionality is configured to be allowed by the plugin administrator.
+* An email is sent to pre-configured email address of the plugin user with details such as site name, product name, product URL, customer name and enquiry message in a well formatted manner. Moreover, the customer can receive a copy of this email if this functionality is configured to be allowed by the plugin administrator.
 
 == Installation ==
 
@@ -34,6 +34,11 @@ As this is an extension for the WooCommerce plugin, you must have WooCommerce pl
 3. Product enquiry form
 
 == Changelog ==
+
+= 0.1.5 =
+* Resolved issue of showing 'Undefined index' warning message.
+* Added code to show 'site name' in email.
+* Formatted email contents in such a way that they look more meaningful and proper aligned.
 
 = 0.1 =
 * Plugin Released
