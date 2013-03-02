@@ -1,11 +1,12 @@
 === Product Enquiry for WooCommerce ===
 
 Contributors: WisdmLabs
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40wisdmlabs%2ecom&lc=US&item_name=WisdmLabs%20Plugin%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: WisdmLabs, WooCommerce, Product Enquiry, Product Enquiry for WooCommerce, eCommerce Product Enquiry, Ask Question about a Product, WooCommerce Plugin, WooCommerce Product Plugin
 Requires at least: 3.4
 Tested up to: 3.5.1
-Version: 0.1.5
-Stable tag: 0.1.5
+Version: 0.2
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +19,8 @@ Product Enquiry for WooCommerce allows prospective customers or visitors to make
 * Plugin user/administrator can configure where to show "Enquiry Button" on the product page and many other details too(please, see screenshot 'Plugin configuration' for more details).
 
 * An email is sent to pre-configured email address of the plugin user with details such as site name, product name, product URL, customer name and enquiry message in a well formatted manner. Moreover, the customer can receive a copy of this email if this functionality is configured to be allowed by the plugin administrator.
+
+* You will find a plugin support sidebar in settings page: This sidebar enables various features such as asking a support query, making enquiry for custom development, know services provided by us etc. right from the plugin settings page.
 
 == Installation ==
 
@@ -35,10 +38,13 @@ As this is an extension for the WooCommerce plugin, you must have WooCommerce pl
 
 == Changelog ==
 
+= 0.2 =
+* Added a plugin support sidebar in settings page.
+
 = 0.1.5 =
 * Resolved issue of showing 'Undefined index' warning message.
 * Added code to show 'site name' in email.
-* Formatted email contents in such a way that they look more meaningful and properly aligned.
+* Formatted email contents in such a way that they look more meaningful and proper aligned.
 
 = 0.1 =
 * Plugin Released

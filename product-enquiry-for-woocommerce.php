@@ -2,7 +2,7 @@
 /*
 Plugin Name: Product Enquiry for WooCommerce
 Description: Allows prospective customers or visitors to make enquiry about a product, right from within the product listing page.
-Version: 0.1.5
+Version: 0.2
 Author: WisdmLabs
 Author URI: http://wisdmlabs.com
 License: GPL2
@@ -82,7 +82,7 @@ function add_ask_product_settings()
     wp_enqueue_script('wdm_wpi_validation', plugins_url("js/wdm-jquery-validate.js", __FILE__), array('jquery'));
     
     ?>
-      <div class="wrap" id="wdm_leftwrap">
+      <div class="wrap wdm_leftwrap">
         <h2>Product Enquiry</h2>
 
      <form name="ask_product_form" id="ask_product_form" method="POST" action="options.php">
@@ -145,5 +145,36 @@ function add_ask_product_settings()
       <?php
       //add styles for settings page
       wp_enqueue_style("wdm-admin-css", plugins_url("css/wpi_admin.css", __FILE__));
+      
+      //include WisdmLabs sidebar
+    
+    $plugin_data  = get_plugin_data(__FILE__);
+    $plugin_name = $plugin_data['Name'];
+    $wdm_plugin_slug = 'product-enquiry-for-woocommerce';
+    
+    include_once('wisdm_sidebar/wisdm_sidebar.php');
+    pew_create_wisdm_sidebar($plugin_name, $wdm_plugin_slug);
 }
+
+function pew_appeal_notice()
+{
+    if((isset($_REQUEST['page']) && $_REQUEST['page'] == 'product-enquiry-for-woocommerce') && (isset($_REQUEST['settings-updated']) && $_REQUEST['settings-updated'] == true))
+    {
+	$wdm_plugin_slug = 'product-enquiry-for-woocommerce';
+    
+	?>
+    
+	<div class="wdm_appeal_text" style="background-color:#FFE698;padding:10px;margin-right:10px;">
+	    <strong>An Appeal:</strong>
+	    We strive hard to bring you useful, high quality plugins for FREE and to provide prompt responses to all your support queries.
+	    If you are happy with our work, please consider making a good faith donation, here -
+	    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40wisdmlabs%2ecom&lc=US&item_name=WisdmLabs%20Plugin%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest" target="_blank"> Donate now</a> 
+	    and do post an encouraging review, here - <a href="http://wordpress.org/support/view/plugin-reviews/<?php echo $wdm_plugin_slug; ?>" target="_blank"> Review this plugin</a>.
+	</div>
+    
+	<?php
+    }
+}
+
+add_action('admin_notices', 'pew_appeal_notice');
 ?>
