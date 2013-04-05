@@ -5,8 +5,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%
 Tags: WisdmLabs, WooCommerce, Product Enquiry, Product Enquiry for WooCommerce, eCommerce Product Enquiry, Ask Question about a Product, WooCommerce Plugin, WooCommerce Product Plugin
 Requires at least: 3.4
 Tested up to: 3.5.1
-Version: 0.2
-Stable tag: 0.2
+Version: 0.2.5
+Stable tag: 0.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ As this is an extension for the WooCommerce plugin, you must have WooCommerce pl
 3. Product enquiry form
 
 == Changelog ==
+
+= 0.2.5 =
+* Fixed tab index issue.
 
 = 0.2 =
 * Added a plugin support sidebar in settings page.

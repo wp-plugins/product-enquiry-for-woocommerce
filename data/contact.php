@@ -108,6 +108,8 @@ if (empty($action)) {
 	<div class='contact-bottom'><a href='http://wisdmlabs.com' target='_blank'>Powered by WisdmLabs</a></div>
 </div>";
  
+ echo $output;
+ 
  $to = base64_encode($to);
  $subject = base64_encode($subject);
  $site_name = base64_encode($site_name);
@@ -123,8 +125,7 @@ if (empty($action)) {
 		}
 		);
  </script>';
- 
-	echo $output;
+ 	
 }
 else if ($action == "send") {
 	// Send the email
