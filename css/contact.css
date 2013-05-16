@@ -42,6 +42,6 @@
 #contact-container a.modal-close:visited {color:#999; font-size:18px; font-weight:bold; position:absolute; text-decoration:none; right:8px; top:0px;}
 #contact-container a.modal-close:hover {color:#bbb;}
 #contact-container textarea {height: 100px !important;}
-.wpi-button{font-weight: bold; color: #555; cursor: pointer; padding: 5px 5px 4px; background-color: #eeeeee; border-radius: 4px 4px 4px 4px; border: 1px solid #CAC9C9; font-size: 13px;}
+.wpi-button{margin-left: 25px !important;font-weight: bold; color: #555; cursor: pointer; padding: 5px 5px 4px; background-color: #eeeeee; border-radius: 4px 4px 4px 4px; border: 1px solid #CAC9C9; font-size: 13px;}
 .wpi-button:hover{background-color: #dddddd;border: 1px solid #CAC9C9;}
 #wdm_product_name{-moz-box-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; box-sizing: none !important; font-family:  inherit !important; color:#333; font-weight:bold; font-size: 14px; width:400px !important; border: none !important;background-color: #eee !important;padding: 4px 2px 10px 12px !important;}
