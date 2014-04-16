@@ -3,20 +3,20 @@
 
 #wisdm_main_content
 {
-    width: 242px;
+    width: 20%;
     float: right;
 }
 
 #wisdm_container{
     float: right;
-    width: 242px;
+    width: 100%;
     background: #f7f7f7;
     border: 1px solid #bababa;
     border-radius: 5px;
     margin: 20px 10px 20px 0;
     padding: 0 10px;
     font-size: 13px;
-}
+} 
 
 #wisdm_container p{
     text-align: center;
@@ -25,7 +25,8 @@
 
 .wdm_leftwrap{
     float: left;
-    width: 850px;
+    width: 74%;
+    overflow: hidden;
 }
 
 #wdm-logo{
