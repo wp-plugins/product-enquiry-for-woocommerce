@@ -4,7 +4,7 @@ Contributors: WisdmLabs
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40wisdmlabs%2ecom&lc=US&item_name=WisdmLabs%20Plugin%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: WisdmLabs, WooCommerce, Product Enquiry, Product Enquiry for WooCommerce, eCommerce Product Enquiry, Ask Question about a Product, WooCommerce Plugin, WooCommerce Product Plugin
 Requires at least: 3.4
-Tested up to: 3.8.3
+Tested up to: 3.9
 Version: 0.3
 Stable tag: 0.3
 License: GPLv2 or later
