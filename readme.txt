@@ -6,7 +6,7 @@ Tags: WisdmLabs, WooCommerce, Product Enquiry, Product Enquiry for WooCommerce, 
 Requires at least: 3.4
 Tested up to: 3.9
 Version: 0.3.1
-Stable tag: trunk
+Stable tag: 0.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
