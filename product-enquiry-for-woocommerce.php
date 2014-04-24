@@ -2,7 +2,7 @@
 /*
 Plugin Name: Product Enquiry for WooCommerce
 Description: Allows prospective customers or visitors to make enquiry about a product, right from within the product listing page.
-Version: 0.3
+Version: 0.3.1
 Author: WisdmLabs
 Author URI: http://wisdmlabs.com
 License: GPL2
@@ -17,7 +17,7 @@ if(!empty($form_init_data))
     if($form_init_data['show_after_summary'] == 1)
     {
 	//show ask button after a single product summary
-        add_action('woocommerce_single_product_summary', 'ask_about_product');
+        add_action('woocommerce_after_single_product_summary', 'ask_about_product');
     }
     }
     
@@ -33,7 +33,7 @@ if(!empty($form_init_data))
 else
 {
     //show ask button after a single product summary as default
-    add_action('woocommerce_single_product_summary', 'ask_about_product');
+    add_action('woocommerce_after_single_product_summary', 'ask_about_product');
 }
 
 function ask_about_product()
