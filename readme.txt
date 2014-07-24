@@ -31,6 +31,8 @@ Our premium version enhances the features of Product Enquiry for WooCommerce, an
 * View Enquiries in Dashboard: You can view enquiries made directly in your dashboard.
 * Filter and Export Enquiry Records: Filter and export enquiry records based on Product Name, Customer Name, etc. to analyse product demands.
 * Style your Enquiry Button and Dialog: Customize the look of your enquiry button and dialog, or use the theme's default CSS settings.
+* Selectively Display Enquiry Button: There is an option provided on every Add/Edit Product Page to selectively display enquiry button for that product.
+* WMPL Compatible: The PRO product is translation ready. If you are using WPML on your site, the enquiry button and dialog text will be translated.
 * Auto-inform Product Owner: The enquiry emails are sent to the site owner as well as the product owner/seller.
 * Responsive Enquiry Dialog: The enquiry button and dialog are responsive, to help customer's seamlessly make enquiries form a mobile device.
 * Field for Telephone Number: An additional (optional) field is provided to input the customer's telephone number.
