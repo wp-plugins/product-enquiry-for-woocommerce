@@ -15,7 +15,8 @@
  */
 
 //date_default_timezone_set('America/Los_Angeles');
-
+//echo "<pre>";print_r($_POST);echo "</pre>";exit;
+global $to;
 if(isset($_POST['wdm_form_dataset']))
 {
 	$form_data = $_POST['wdm_form_dataset'];
@@ -34,12 +35,12 @@ if(isset($_POST['wdm_site_name']))
 // User settings
 if (!empty($form_data['user_email']))
 	$to = $form_data['user_email'];
-else
+else if(isset($to_adm))
 	$to = $to_adm;
 	
 if (!empty($form_data['default_sub']))
 	$subject = $form_data['default_sub'];
-else
+else if(isset($site_name))
 	$subject = "Enquiry for a product from ".$site_name;
 
 	
@@ -48,7 +49,7 @@ else
  
 $extra = array(
 	"form_subject"	=> true,
-	"form_cc"	=> ($form_data['enable_send_mail_copy'] == 1) ? true : false,
+	"form_cc"	=> (isset($form_data['enable_send_mail_copy']) ? true : false),
 	"ip"		=> false,
 	"user_agent"	=> false
 );
@@ -129,6 +130,7 @@ if (empty($action)) {
 }
 else if ($action == "send") {
 	// Send the email
+	//echo "<pre>";print_r($_REQUEST);echo "</pre>";exit;
 	$name = isset($_POST["name"]) ? $_POST["name"] : "";
 	$email = isset($_POST["email"]) ? $_POST["email"] : "";
 	$subject = isset($_POST["wdm_form_def_sub"]) ? $_POST["wdm_form_def_sub"] : "";
@@ -141,6 +143,7 @@ else if ($action == "send") {
 	$token = isset($_POST["token"]) ? $_POST["token"] : "";
 	$to = isset($_POST["wdm_form_mail_to"]) ? $_POST["wdm_form_mail_to"] : "";
 	$to = base64_decode($to);
+	//echo $to;exit;
 	$site_name = isset($_POST["wdm_website_name"]) ? $_POST["wdm_website_name"] : "";
 	$site_name = base64_decode($site_name);
 	
@@ -186,6 +189,7 @@ function smcf_send($name, $email, $subject, $product_url, $product_name, $site_n
 	$body .= "<strong>Product Name:</strong> '". $product_name ."'<br /><br />";
 	$body .= "<strong>Product URL:</strong> ". $product_url ."<br /><br />";
 	$body .= "<strong>Customer Name:</strong> ". $name ."<br /><br />";
+	$body .= "<strong>Customer Email:</strong> ". $email ."<br /><br />";
 	$body .= "<strong>Message:</strong> <br />". $message;
 	$body = wordwrap($body, 100);
 
@@ -207,10 +211,14 @@ function smcf_send($name, $email, $subject, $product_url, $product_name, $site_n
 	$headers .= "MIME-Version: 1.0\n";
 	$headers .= "Content-type: text/html; charset=utf-8\n";
 	$headers .= "Content-Transfer-Encoding: quoted-printable\n";
-
-	// Send email
-	@mail($to, $subject, $body, $headers) or 
-		die("Unfortunately, a server issue prevented delivery of your message.");
+	//echo "to ".$to."<br>";
+	//echo "subject ".$subject."<br>";
+	//echo "body ".$body."<br>";
+	//echo "headers ".$headers."<br>";exit;
+	wp_mail($to, $subject, $body, $headers) or die("Unfortunately, a server issue prevented delivery of your message.");
+	
+	//wp_mail($to, $subject, $body, $headers) or 
+	//	die("Unfortunately, a server issue prevented delivery of your message.");
 }
 
 // Remove any un-safe values to prevent email injection

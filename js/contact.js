@@ -114,7 +114,7 @@ jQuery(function ($) {
 					}, function () {
 						$('#contact-container .contact-loading').fadeIn(200, function () {
 							$.ajax({
-								url: object_name.contact_url,
+								url: object_name.ajaxurl,
 								data: $('#contact-container form').serialize() + '&action=send',
 								type: 'post',
 								cache: false,
