@@ -2,7 +2,7 @@
 /*
 Plugin Name: Product Enquiry for WooCommerce
 Description: Allows prospective customers or visitors to make enquiry about a product, right from within the product listing page.
-Version: 0.3.2
+Version: 0.3.3
 Author: WisdmLabs
 Author URI: http://wisdmlabs.com
 License: GPL2

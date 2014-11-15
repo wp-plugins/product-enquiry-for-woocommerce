@@ -272,4 +272,4 @@ function smcf_validate_email($email) {
 	return true;
 }
 exit;
-?>
+
