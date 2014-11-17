@@ -1,7 +1,5 @@
 <?php
-
-/*
- * SimpleModal Contact Form
+/* SimpleModal Contact Form
  * http://simplemodal.com/
  * http://code.google.com/p/simplemodal/
  *
@@ -15,7 +13,6 @@
  */
 
 //date_default_timezone_set('America/Los_Angeles');
-//echo "<pre>";print_r($_POST);echo "</pre>";exit;
 global $to;
 if(isset($_POST['wdm_form_dataset']))
 {
@@ -128,7 +125,7 @@ if (empty($action)) {
  </script>';
  	
 }
-else if ($action == "send") {
+else if ($action == "wdm_send") {
 	// Send the email
 	//echo "<pre>";print_r($_REQUEST);echo "</pre>";exit;
 	$name = isset($_POST["name"]) ? $_POST["name"] : "";
@@ -271,5 +268,5 @@ function smcf_validate_email($email) {
 
 	return true;
 }
-exit;
+//exit;
 ?>

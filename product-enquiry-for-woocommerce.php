@@ -1,8 +1,7 @@
 <?php
-/*
-Plugin Name: Product Enquiry for WooCommerce
+/*Plugin Name: Product Enquiry for WooCommerce
 Description: Allows prospective customers or visitors to make enquiry about a product, right from within the product listing page.
-Version: 0.3.3
+Version: 0.3.5
 Author: WisdmLabs
 Author URI: http://wisdmlabs.com
 License: GPL2
@@ -59,9 +58,6 @@ function ask_about_product()
         wp_enqueue_script("wdm-simple-modal", plugins_url("js/jquery.simplemodal.js", __FILE__), array("jquery"));
         wp_enqueue_script("wdm-contact", plugins_url("js/contact.js", __FILE__), array("jquery"));	
 
-		
-
-        
 	//pass parameters to contact.php file
         $wdm_translation_array = array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'product_name'=>get_the_title(), 'contact_url' => plugins_url("data/contact.php", __FILE__), 'form_dataset' => $form_data, 'admin_email' => get_option('admin_email'), 'site_name' => get_bloginfo('name'));
         wp_localize_script( 'wdm-contact', 'object_name', $wdm_translation_array );
@@ -75,14 +71,14 @@ function create_ask_product_menu()
     //create a submenu under Woocommerce 'Products' menu
     add_submenu_page('edit.php?post_type=product', 'Product Enquiry', 'Product Enquiry', 'manage_options', 'pefw', 'add_ask_product_settings' );
 }
-add_action('wp_ajax_contact_ajax','contact_status');
-add_action('wp_ajax_nopriv_contact_ajax','contact_status');
-function contact_status(){
-   include("data/contact.php");
-   die();
-}
-add_action('wp_ajax_send','contact_email');
-add_action('wp_ajax_nopriv_send','contact_email');
+//add_action('wp_ajax_contact_ajax','contact_status');
+//add_action('wp_ajax_nopriv_contact_ajax','contact_status');
+//function contact_status(){
+//   include("data/contact.php");
+//   die();
+//}
+add_action('wp_ajax_wdm_send','contact_email');
+add_action('wp_ajax_nopriv_wdm_send','contact_email');
 function contact_email(){
    include("data/contact.php");
    die();
@@ -100,8 +96,7 @@ function add_ask_product_settings()
     //settings page
     
     wp_enqueue_script('wdm_wpi_validation', plugins_url("js/wdm-jquery-validate.js", __FILE__), array('jquery'));
-	
-    /*wp_enqueue_style( 'icomoon-icons', 'http://i.icomoon.io/public/temp/f775f44665/UntitledProject1/style.css' ); */
+    
     ?>
     
       <div class="wrap wdm_leftwrap">
@@ -260,11 +255,11 @@ Flexibility to create your own fields within the enquiry form.
 </p>
 <input type="button" class="wdm-services-button wdm-Customize " value="Request Feature" />
 <div class="hide_class">
-<?php echo "<h4 class='wdm-req-title'>" . $current_user->user_login . ", You have been Requested this Freature </h4>"; ?>
+<?php echo "<h4 class='wdm-req-title'>Please confirm your feature request</h4>"; ?>
 <form class="wdm-req-form customize-your-enquiry-form" >
 <br><small>Confirm Email-id :</small>
 <input type="text" class="wdm-req-text" name="wdm-req-email" value="<?php echo $current_user->user_email ?>" />
-<input type="button" class="wdm-req-button" value="Request Feature" name="request-feature" />
+<input type="button" class="wdm-req-button" value="Send Request" name="request-feature" />
 <input type="hidden" class="id" name="id" value="customize-your-enquiry-form" />
 
 <div class="loading"></div>
@@ -280,11 +275,11 @@ Allow visitors to enquire about your products directly from the shop page.
 </p>
 <input type="button" class="wdm-services-button" value="Request Feature" />
 <div class="hide_class">
-<?php echo "<h4 class='wdm-req-title'>" . $current_user->user_login . ", You have been Requested this Freature </h4>"; ?>
+<?php echo "<h4 class='wdm-req-title'>Please confirm your feature request</h4>"; ?>
 <form class="wdm-req-form display-enquiry-button-on-shop" >
 <br><small>Confirm Email-id :</small>
 <input type="text" class="wdm-req-text" name="wdm-req-email" value="<?php echo $current_user->user_email ?>" />
-<input type="button" class="wdm-req-button" value="Request Feature" name="request-feature" />
+<input type="button" class="wdm-req-button" value="Send Request" name="request-feature" />
 <input type="hidden" class="id" name="id" value="display-enquiry-button-on-shop" />
 <div class="loading"></div>
 </form>
@@ -299,11 +294,11 @@ Style and create templates for your enquiry emails from your dashboard.
 </p>
 <input type="button" class="wdm-services-button one" value="Request Feature" />
 <div class="hide_class">
-<?php echo "<h4 class='wdm-req-title'>" . $current_user->user_login . ", You have been Requested this Freature </h4>"; ?>
+<?php echo "<h4 class='wdm-req-title'>Please confirm your feature request</h4>"; ?>
 <form class="wdm-req-form create-a-custom-email" >
 <br><small>Confirm Email-id :</small>
 <input type="text" class="wdm-req-text" name="wdm-req-email" value="<?php echo $current_user->user_email ?>" />
-<input type="button" class="wdm-req-button" value="Request Feature" name="request-feature" />
+<input type="button" class="wdm-req-button" value="Send Request" name="request-feature" />
 <input type="hidden" class="id" name="id" value="create-a-custom-email" />
 
 <div class="loading"></div>
@@ -321,11 +316,11 @@ Replace the add-to-cart button with the enquiry button for your products.
 </p>
 <input type="button" class="wdm-services-button" value="Request Feature" />
 <div class="hide_class">
-<?php echo "<h4 class='wdm-req-title'>" . $current_user->user_login . ", You have been Requested this Freature </h4>"; ?>
+<?php echo "<h4 class='wdm-req-title'>Please confirm your feature request</h4>"; ?>
 <form class="wdm-req-form hide-or-replace-add-to-cart-button" >
 <br><small>Confirm Email-id :</small>
 <input type="text" class="wdm-req-text" name="wdm-req-email" value="<?php echo $current_user->user_email ?>" />
-<input type="button" class="wdm-req-button" value="Request Feature" name="request-feature" />
+<input type="button" class="wdm-req-button" value="Send Request" name="request-feature" />
 <input type="hidden" class="id" name="id" value="hide-or-replace-add-to-cart-button" />
 
 <div class="loading"></div>
@@ -341,11 +336,11 @@ Get detailed analytics for your enquiries based on products and other attributes
 </p>
 <input type="button" class="wdm-services-button" value="Request Feature" />
 <div class="hide_class">
-<?php echo "<h4 class='wdm-req-title'>" . $current_user->user_login . ", You have been Requested this Freature </h4>"; ?>
+<?php echo "<h4 class='wdm-req-title'>Please confirm your feature request</h4>"; ?>
 <form class="wdm-req-form Analytics-for-your-enquiry" >
 <br><small>Confirm Email-id :</small>
 <input type="text" class="wdm-req-text" name="wdm-req-email" value="<?php echo $current_user->user_email ?>" />
-<input type="button" class="wdm-req-button" value="Request Feature" name="request-feature" />
+<input type="button" class="wdm-req-button" value="Send Request" name="request-feature" />
 <input type="hidden" class="id" name="id" value="Analytics-for-your-enquiry" />
 
 <div class="loading"></div>
@@ -361,11 +356,11 @@ Get your newsletter plugin integrated seamlessly with PEP.
 </p>
 <input type="button" class="wdm-services-button" value="Request Feature" />
 <div class="hide_class">
-<?php echo "<h4 class='wdm-req-title'>" . $current_user->user_login . ", You have been Requested this Freature </h4>"; ?>
+<?php echo "<h4 class='wdm-req-title'>Please confirm your feature request</h4>"; ?>
 <form class="wdm-req-form newsletter-integration-with-pep" >
 <br><small>Confirm Email-id :</small>
 <input type="text" class="wdm-req-text" name="wdm-req-email" value="<?php echo $current_user->user_email ?>" />
-<input type="button" class="wdm-req-button" value="Request Feature" name="request-feature" />
+<input type="button" class="wdm-req-button" value="Send Request" name="request-feature" />
 <input type="hidden" class="id" name="id" value="newsletter-integration-with-pep" />
 
 <div class="loading"></div>
@@ -472,11 +467,9 @@ Select a feature you want us to develop and leave us a note about it. We will ge
      <form name="ask_product_form" id="ask_product_form" method="POST" action="options.php" style="background: #fff; padding: 10px 15px 0 15px;">
         <?php
             settings_fields('wdm_form_options');
-            $default_vals =   array('show_after_summary'=>1        
-                                    );
+            $default_vals =   array('show_after_summary'=>1);
             $form_data = get_option( 'wdm_form_data', $default_vals);
             ?>
-            
       <div id="ask_abt_product_panel">
 	<fieldset>
 	    <?php echo '<legend>'. __("Emailing Information",'pep_text_domain').'</legend>'; ?>
@@ -637,7 +630,6 @@ Select a feature you want us to develop and leave us a note about it. We will ge
 	 
      <?php } ?>
     </div>
-    
       <?php
       //add styles for settings page
       wp_enqueue_style("wdm-admin-css", plugins_url("css/wpi_admin.css", __FILE__));
@@ -651,11 +643,11 @@ Select a feature you want us to develop and leave us a note about it. We will ge
    // include_once('wisdm_sidebar/wisdm_sidebar.php');
    // pew_create_wisdm_sidebar($plugin_name, $wdm_plugin_slug);
 }
-?>
 
-<?php
-add_action( 'admin_footer', 'my_action_javascript' ); // Write our JS below here
-function my_action_javascript() { ?>
+add_action( 'admin_footer', 'wdm_action_javascript' ); // Write our JS below here
+
+function wdm_action_javascript() {
+if(isset($_GET["page"]) && $_GET["page"] == "pefw"){ ?>
 <script type="text/javascript" >
 jQuery(document).ready(function($) {
 jQuery(".wdm-req-button").click(function() {
@@ -663,7 +655,7 @@ var data = {};
 data.email = $(this).siblings(".wdm-req-text").val();
 data.id = $(this).siblings( ".id" ).val();
 data.updates = $(this).siblings(".wdm-req-confirm").prop("checked");
-data.action = "my_action";
+data.action = "wdm_pe_action";
 var email = $(this).siblings(".wdm-req-text").val();
 var txt = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 if (!txt.test(email)) {
@@ -686,10 +678,14 @@ jQuery(id).find("div.loading").hide();
 });
 });
 });
-</script> <?php
+</script>
+<?php
 }
-add_action( 'wp_ajax_my_action', 'my_action_callback' );
-function my_action_callback() {
+}
+
+add_action( 'wp_ajax_wdm_pe_action', 'wdm_pe_action_callback' );
+
+function wdm_pe_action_callback() {
 global $wpdb; // this is how you get access to the database
 $email = $_POST['email'];
 $id = $_POST['id'];

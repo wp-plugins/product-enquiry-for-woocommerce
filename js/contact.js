@@ -115,7 +115,7 @@ jQuery(function ($) {
 						$('#contact-container .contact-loading').fadeIn(200, function () {
 							$.ajax({
 								url: object_name.ajaxurl,
-								data: $('#contact-container form').serialize() + '&action=send',
+								data: $('#contact-container form').serialize() + '&action=wdm_send',
 								type: 'post',
 								cache: false,
 								dataType: 'html',
