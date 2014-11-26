@@ -192,10 +192,11 @@ function smcf_send($name, $email, $subject, $product_url, $product_name, $site_n
 
 	// Build header
 	$headers = "From: $email\n";
+	$headers .= "Reply-To: $email \n";
 	if ($cc == 1) {
 		$headers .= "Cc: $email\n";
 	}
-	$headers .= "X-Mailer: PHP/SimpleModalContactForm";
+	// $headers .= "X-Mailer: PHP/SimpleModalContactForm";
 
 	// UTF-8
 	if (function_exists('mb_encode_mimeheader')) {

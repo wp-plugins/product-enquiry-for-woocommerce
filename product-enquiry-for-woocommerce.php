@@ -1,9 +1,10 @@
 <?php
 /*Plugin Name: Product Enquiry for WooCommerce
 Description: Allows prospective customers or visitors to make enquiry about a product, right from within the product listing page.
-Version: 0.3.5
+Version: 0.3.6
 Author: WisdmLabs
 Author URI: http://wisdmlabs.com
+Plugin URI: https://wordpress.org/plugins/product-enquiry-for-woocommerce
 License: GPL2
 */
 
@@ -109,42 +110,65 @@ function add_ask_product_settings()
       <div class="wdm-content-layer">
       	<div class="wdm-left-content">
        		<img src='<?php echo plugins_url('img/PEP_new.png',__FILE__); ?>' class='wdm_pro_logo'>
-			<div class="wdm-actionBtn">
-        		<a class='wdm_upgrade_pro_link' href='http://wisdmlabs.com/demo/product/woocommerce-product-enquiry-plugin/' target='_blank'>View Demo </a>
-            </div>
+			<div class="wdm_upgrade">
+						<a class='wdm_upgrade_pro_link' href='http://wisdmlabs.com/woocommerce-product-enquiry-pro/' target='_blank'>UPGRADE TO PRO </a>
+				</div>
         </div>
         <div class="wdm-right-content">	
         	<div class="wdm-features">
-            	<h3 class='wdm_feature_heading'>New Features In Pro Version</h3>
+            	<h3 class='wdm_feature_heading'>Features In Pro Version</h3>
                
 			   <div class='wdm-feature-list'>
 				
 						<div class="wdm-feature">
-							<span class="wdmiconfilter"></span>
+							<span class="icon-filter"></span>
 							<p>Filter <br> enquires</p>
 						</div>
 					
 						<div class="wdm-feature">
-							<span class="wdmiconexpand"></span>
+							<span class="icon-expand"></span>
 							<p>Responsive</p>
 						</div>
 																					
 						<div class="wdm-feature">
-							<span class="wdmiconpaint-format"></span>
+							<span class="icon-paint-format"></span>
 							<p>Custom <br> styling</p>
 						</div>
 						 <div class="wdm-feature">
-							<span class="wdmiconearth"></span>
+							<span class="icon-earth"></span>
 							<p>WPML <br> Compatible</p>
 						 </div>
-						  <div class="wdm-feature">
-							<span class="wdmiconprofile"></span>
-							<p>Customizable <br> Enquiry Form</p>
-						  </div>
-					
+						<div class="wdm-feature">
+							<span class="icon-eye"></span>
+							<p>Enquiries<br>in dashboard</p>
+						</div>
+							
+						<div class="wdm-feature">
+							<span class="icon-drawer"></span>
+							<p>Export<br>enquiry records</p>
+						</div>	
+							
+						<div class="wdm-feature">
+							<span class="icon-bubbles"></span>
+							<p>Localization<br>ready</p>
+						</div>
+
+						<div class="wdm-feature">
+							<span class="icon-pencil"></span>
+							<p>Customizable<br>Enquiry Form</p>
+						</div>
+
 					<div class="clear"></div>
 				</div>
 				
+				<div class="wdm_coupon">
+				
+						<p><span class="offer">Black Friday Offer: </span>Use this coupon code and get a <span class="emphasize">25% DISCOUNT</span> *</p>
+							<div>
+								<h1>BLACKFRIDAY25</h1>
+						</div>
+				</div>
+
 				<!-- <div class='wdm-feature-list'>
 					
 							<div class="wdm-feature">
@@ -165,9 +189,7 @@ function add_ask_product_settings()
 							<div class="clear"></div>
 				</div> -->
 				
-				<div class="wdm_coupon">
-						<a class='wdm_upgrade_pro_link' href='http://wisdmlabs.com/woocommerce-product-enquiry-pro/' target='_blank'>UPGRADE TO PRO </a>
-				</div>
+				
             </div>
         </div>
         <div class='clear'></div>
@@ -176,6 +198,8 @@ function add_ask_product_settings()
 	
     </div> <!--wdm-pro-notification ends-->
     
+    <p class="validity">*Valid till 5th December 2014</p>
+
         <h2>Product Enquiry</h2>
 <br />
 	<?php
