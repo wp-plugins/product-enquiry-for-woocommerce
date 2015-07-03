@@ -46,26 +46,26 @@
     color: #961914;
 }
 .wdm-left-content {
-    /*      width: 36%; */
-    
-    width: 28%;
-    /* margin: 0 1%; */
-    
-    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     float: left;
+    margin: 0;
+    padding: 0 20px;
     text-align: center;
+    width: 25%;
 }
 .wdm_pro_logo {
     width: 68%;
 }
 .wdm-right-content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     float: right;
-    /* width:60%; */
-    
-    width: 72%;
-    /* margin:1%; */
-    
     margin: 1% 0;
+    padding: 0;
+    width: 75%;
 }
 .wdm-features {
     float: left;
@@ -104,10 +104,13 @@
     margin: 0 auto;
     border: 1px solid #961914;
 }
-.wdm_upgrade_pro_link:hover {
+.wdm_upgrade_pro_link:hover,
+.wdm_upgrade_pro_link:active,
+.wdm_upgrade_pro_link:focus {
     border: 1px solid #961914;
     background: #fff;
     color: #961914;
+    box-shadow: none;
 }
 .wdm_demo_link {
     background: #fff;
@@ -168,8 +171,7 @@
 }
 fieldset {
     border: 1px solid #ddd;
-    
-    
+    padding: 0 10px;
     background: #fff;
 }
 #wdm_pep_pro_features {
@@ -248,25 +250,37 @@ legend {
 }
 .layer_parent {
     position: relative;
+    margin-right: 15px;
 }
 /*.layer_parent img{width: 100%;}*/
 
 #Other_Settings .pew_upgrade_layer {
     height: 420px;
 }
+#available .pew_upgrade_layer {
+    height: 335px;
+}
+
 .pew_upgrade_layer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     /*dim the background*/
 }
 #Other_Settings .pew_upgrade_layer > .pew_uptp_cont {
     float: right;
-    margin: 160px 60px 0 0;
+    margin: 160px 26px 0 0;
 }
+#available .pew_uptp_cont {
+   
+   float:right;
+   margin: 17.5% 2.5%;
+   
+    }
 .pew_pro_txt {
     color: #961914;
     font-weight: bold;
@@ -303,9 +317,11 @@ legend {
     width: 88px;
     border: 1px solid #960000;
 }
-.wdm_view_det_link:hover {
+.wdm_view_det_link:hover,
+.wdm_view_det_link:active,
+.wdm_view_det_link:focus {
     /*border:1px solid #961914;*/
-    
+    box-shadow: none;
     background: #444;
     color: #960000;
     background: transparent;
@@ -320,163 +336,64 @@ legend {
     margin: 300px auto;
 }
 /*ICONS*/
- @font-face {
-  font-family: 'pep-font_new';
-  src:url('../fonts/pep-font_new.eot?-6xeaiw');
-  src:url('../fonts/pep-font_new.eot?#iefix-6xeaiw') format('embedded-opentype'),
-    url('../fonts/pep-font_new.woff?-6xeaiw') format('woff'),
-    url('../fonts/pep-font_new.ttf?-6xeaiw') format('truetype'),
-    url('../fonts/pep-font_new.svg?-6xeaiw#pep-font_new') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="wdmicon"], [class*=" wdmicon"] {
-  font-family: 'pep-font_new';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} 
-
-
-
-.wdmiconarchive:before {
-  content: "\e605";
-}
-.wdmiconpaint-format:before {
-  content: "\e600";
-}
-.wdmiconbubbles:before {
-  content: "\e604";
-}
-.wdmiconexpand:before {
-  content: "\e601";
-}
-.wdmiconeye:before {
-  content: "\e602";
-}
-.wdmiconfilter:before {
-  content: "\e603";
-}
-
-
 @font-face {
-    font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?-e9l5r8');
-    src: url('../fonts/icomoon.eot?#iefix-e9l5r8') format('embedded-opentype'), url('../fonts/icomoon.woff?-e9l5r8') format('woff'), url('../fonts/icomoon.ttf?-e9l5r8') format('truetype'), url('../fonts/icomoon.svg?-e9l5r8#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'wdm-PEF-font';
+	src:url('../fonts/wdm-PEF-font.eot?3qbpdd');
+	src:url('../fonts/wdm-PEF-font.eot?#iefix3qbpdd') format('embedded-opentype'),
+		url('../fonts/wdm-PEF-font.woff?3qbpdd') format('woff'),
+		url('../fonts/wdm-PEF-font.ttf?3qbpdd') format('truetype'),
+		url('../fonts/wdm-PEF-font.svg?3qbpdd#wdm-PEF-font') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
-[class^="icon-"], [class*=" icon-"] {
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+
+[class^="wdmicon-"], [class*=" wdmicon-"] {
+	font-family: 'wdm-PEF-font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1.25;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-.icon-pencil:before {
-    content: "\e600";
+
+.wdmicon-pencil2:before {
+	content: "\e906";
 }
-.icon-bubbles:before {
-    content: "\e601";
+
+.wdmicon-paint-format:before {
+	content: "\e90c";
 }
-.icon-drawer:before {
-    content: "\e602";
+
+.wdmicon-drawer2:before {
+	content: "\e95d";
 }
-.icon-cabinet:before {
-    content: "\e603";
+
+.wdmicon-bubbles3:before {
+	content: "\e96f";
 }
-.icon-eye:before {
-    content: "\e604";
+
+.wdmicon-enlarge:before {
+	content: "\e989";
 }
-.icon-earth:before {
-    content: "\e605";
+
+.wdmicon-earth:before {
+	content: "\e9ca";
 }
-.icon-paint-format:before {
-    content: "\e606";
+
+.wdmicon-eye:before {
+	content: "\e9ce";
 }
-.icon-filter:before {
-    content: "\e607";
-}
-.icon-expand:before {
-    content: "\e608";
+
+.wdmicon-filter:before {
+	content: "\ea5b";
 }
 
 
-@font-face {
-  
- src:url('../fonts/features-new.eot?g6ysql');
-      src:url('../fonts/features-new.eot?#iefixg6ysql') format('embedded-opentype'),
-      url('../fonts/features-new.woff?g6ysql') format('woff'),
-      url('../fonts/features-new.ttf?g6ysql') format('truetype'),
-      url('../fonts/features-new.svg?g6ysql#features-new') format('svg');
-    
-
-  
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-[class^="wdmicon"], [class*=" wdmicon"] {
-  font-family: 'features-new';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.wdmiconperproduct:before {
-  content: "\e602";
-}
-.wdmiconpaint-format:before {
-  content: "\e604";
-}
-.wdmiconprofile:before {
-  content: "\e601";
-}
-.wdmiconbubbles:before {
-  content: "\e605";
-}
-.wdmiconexpand:before {
-  content: "\e606";
-}
-.wdmiconearth:before {
-  content: "\e600";
-}
-.wdmiconeye:before {
-  content: "\e607";
-}
-.wdmiconfilter:before {
-  content: "\e608";
-}
-.wdmiconcode:before {
-  content: "\e603";
-}
-.wdmicondownload:before {
-  content: "\e609";
-}
-.wdmiconarchive:before {
-content: "\e605";
-}
 
 .wdm-feature-list span {
     font-size: 30px;
@@ -484,53 +401,28 @@ content: "\e605";
 /*End of icons*/
 
 .wdm_feature_heading {
-    font-size: 1.3em;
-    margin-bottom: 20px;
+    border-bottom: 1px dashed #bbb;
+    font-size: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
-.wdm-feature-list {
-    margin: 20px 0 0px 0;
-}
+
 .wdm-feature-list p {
-    font-size: 17px;
+    font-size: 15px;
     padding: 8px 9px;
     font-weight: 400;
-    margin: 10px 0 0px 0;
 }
 .wdm-content-layer {
     margin: 10px;
 }
-.wdm_coupon {
-    text-align: center;
-    width: 98%;
-    padding-top: 10px;
-    margin-top: -10px;
-    border-top: 1px dashed #bbb;
-}
-.wdm_coupon p {
-    font-weight: 400;
-    margin-top: 0;
-}
-.wdm_coupon div {
-    display: inline-block;
-    border: 1px dashed black;
-    padding: 12px 15px 12px 15px;
-}
-.wdm_coupon p:last-child {
-    text-align: right;
-    margin-bottom: 0px;
-}
-.wdm_coupon p:first-child {
-    font-size: 15px;
-    margin-bottom: 9px;
-}
-.wdm_coupon div h1 {
-    color: #961914;
-    margin: 0px;
-}
 .wdm-feature-list .wdm-feature {
-    width: 23%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     float: left;
+    padding-right: 15px;
+    padding-top: 30px;
+    width: 25%;
 }
 /*---------------------------------Tab css----------------------------------------*/
 
@@ -634,9 +526,21 @@ content: "\e605";
     /*border: 1px solid white;
   outline: 1px solid #f1f1f1;*/
     
-    margin: 0px auto;
-    width: 85%;
+  /*  margin: 0px auto;
+    width: 85%;*/
 }
+
+.wdm-services-list {
+    margin: 40px auto 10px;
+    max-width: 970px;
+    text-align: center;
+    width: 100%;
+}
+
+.wdm-services-list .wdm_upgrade_pro_link {
+    padding: 7px;
+}
+
 .wdm_pro_logo {
     margin-top: 5px;
 }
@@ -1078,6 +982,7 @@ Color option three
 }
 .wdm-tab-container {
     margin-top: 15px;
+    margin-right: 15px;
 }
 .wdm-container .wdm-abt {
     float: left;
@@ -1105,16 +1010,28 @@ Color option three
 }*/
 
 li.wdm-services-item {
-    width: 221px;
+    background: none repeat scroll 0 0 #fff;
     border: 1px solid #ddd;
-    float: left;
-    background: #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     display: inline-block;
+    float: left;
+    margin-bottom: 30px;
+    margin-right: 2%;
     padding: 20px 35px;
     position: relative;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    width: 32%;
 }
+
+li.wdm-services-item:nth-child(3n+1) {
+    clear: left;
+}
+
+li.wdm-services-item:nth-child(3n) {
+    margin-right: 0;
+}
+
 input.wdm-services-button {
     width: 100%;
     cursor: pointer;
@@ -1137,6 +1054,7 @@ input.wdm-services-button {
 .wdm-contact-button {
     background: #961914;
     color: #fff;
+    display: inline-block;
     text-decoration: none;
     padding: 10px;
     cursor: pointer;
@@ -1151,8 +1069,11 @@ input.wdm-services-button {
     font-size: 15px;
     font-weight: bold;
 }
-.wdm-contact-button:hover {
+.wdm-contact-button:hover,
+.wdm-contact-button:focus,
+.wdm-contact-button:active {
     border: 1px solid #961914;
+    box-shadow: none;
     background: #fff;
     color: #961914;
 }
@@ -1188,6 +1109,7 @@ input.wdm-services-button {
     text-align: center;
     color: #474343;
     line-height: 1.5em;
+    min-height: 50px;
 }
 p.wdm-services-desc {
     text-align: center;
@@ -1202,12 +1124,15 @@ p.wdm-services-desc {
 }
 .hide_class {
     display: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     height: 100px;
     height: 190px;
     margin-top: -65px;
     background: #f6f6f6;
     z-index: 1;
-    width: 251px;
+    width: 94%;
     margin-left: -26px;
     position: absolute;
     box-shadow: 0px 0px 3px 3px #ccc;
@@ -1261,25 +1186,51 @@ p.wdm-services-desc {
 }
 ul.wdm-premium-plugins {
     list-style: none;
-    /* float: left; */
-    
-    margin-top: 3px;
     margin: 10px auto;
-    width: 84%;
+    max-width: 970px;
+    width: 100%;
+}
+ul.wdm-premium-plugins:before {
+    content: '';
+    display: table;
+}
+ul.wdm-premium-plugins:after {
+    content: '';
+    clear: both;
+    display: table;
 }
 li.wdm-plugins-item {
-    width: 150px;
+    background-color: #fff;
     border: 1px solid #ddd;
-    float: left;
-    background: #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     display: inline-block;
+    float: left;
+    margin-bottom: 12px;
+    margin-right: 2%;
     padding: 20px 30px;
     position: relative;
-    margin-right: 20px;
-    margin-bottom: 12px;
+    text-align: center;
+    width: 23.5%;
+}
+
+li.wdm-plugins-item.first {
+    clear: left;
+}
+li.wdm-plugins-item.last {
+    margin-right: 0;
 }
 li.wdm-plugins-item p {
-    min-height: 116px;
+    min-height: 118px;
+}
+
+ul.three-grids {
+    max-width: 730px;
+}
+
+ul.three-grids li.wdm-plugins-item {
+    width: 32%;
 }
 .wdm-error {
     border: 2px solid red;
@@ -1294,17 +1245,19 @@ li.wdm-plugins-item p {
     width: 53px;
 }
 .wdm-plugins-item h3 {
+    font-size: 1.2em;
+    min-height: 53px;
     text-align: center;
 }
 .wdm-feature p {
     display: inline-block;
-    margin-top: -5px;
+    margin: 0;
     padding-top: 0;
     line-height: 1.25;
     text-align: left;
     vertical-align: top;
 }
-.wdm-feature {
+/*.wdm-feature {
     margin-right: 20px;
 }
 .wdm-feature:nth-child(4n) {
@@ -1312,27 +1265,7 @@ li.wdm-plugins-item p {
 }
 .wdm-feature:nth-child(-n+5) {
     margin-bottom: 25px;
-}
+}*/
 .wdm_upgrade {
     margin-top: 10px;
-}
-.wdm_coupon h3 {
-    text-align: left;
-    margin-left: 20px;
-}
-span.offer {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-p.validity{
-    text-align: right;
-    margin-top: 0;
-    margin-right: 13px;
-}
-
-span.emphasize
-{
-color: black;
-font-weight:600;
 }

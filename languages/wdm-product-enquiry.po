@@ -1,0 +1,577 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: product-enquiry-for-woocommerce\n"
+"POT-Creation-Date: 2015-07-02 18:50+0530\n"
+"PO-Revision-Date: 2015-07-02 18:50+0530\n"
+"Last-Translator: \n"
+"Language-Team: WisdmLabs <support@wisdmlabs.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/sonali/Desktop/product-enquiry-for-woocommerce\n"
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:17
+msgid ""
+"<strong>This is a MAJOR Update Product Enquiry for WooCommerce has been "
+"completely revamped. The button position has been updated to be displayed "
+"below the add to cart button. Take a look at the screenshot at wordpress."
+"org</strong>"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:34
+msgid ""
+"<strong>WooCommerce</strong> plugin is not active. In order to make "
+"<strong>Product Enquiry</strong> plugin work, you need to install and "
+"activate <strong>WooCommerce</strong> first"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:99
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:623
+msgid "Make an enquiry for this product"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:117
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:224
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:307
+msgid "Product Enquiry"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:121
+msgid "Name:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:125
+msgid "Email:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:129
+msgid "Subject:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:133
+msgid "Enquiry:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:139
+msgid "Send me a copy"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:144
+msgid "Send"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:145
+msgid "Cancel"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:171
+msgid "Powered by WisdmLabs"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:176
+msgid "Sending..."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:192
+msgid "Name is required."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:193
+msgid "Enter valid Email Id."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:194
+msgid "Enquiry length must be atleast 10 characters."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:239
+msgid "Get The New Premium Version"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:246
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:372
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:421
+msgid "UPGRADE TO PRO"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:251
+msgid "Features In Pro Version"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:257
+msgid "Filter"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:257
+msgid " enquires"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:262
+msgid "Responsive"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:267
+msgid "Custom"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:267
+msgid "styling"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:271
+msgid "WPML"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:271
+msgid "Compatible"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:275
+msgid "Enquiries"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:275
+msgid "in dashboard"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:280
+msgid "Export"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:280
+msgid "enquiry records"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:285
+msgid "Localization"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:285
+msgid "ready"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:290
+msgid "Customizable"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:290
+msgid "Enquiry Form"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:317
+msgid "Enquiry Settings"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:318
+msgid "Enquiry Details"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:319
+msgid "Product Enquiry Ideas"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:320
+msgid "Hire Us"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:330
+msgid "This feature is available in the PRO version. Click below to know more."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:331
+msgid "View Details"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:348
+msgid ""
+"Product Enquiry Pro is one of WisdmLabs early plugins and a very successful "
+"one. With over "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:348
+msgid "200 satisfied customers"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:348
+msgid ""
+"we continue to improve PEP and give the best to our customers. We stand by "
+"our products and make sure we give our customers what they are looking for "
+"with great quality and even better features. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:350
+msgid "THIS IS WHERE WE NEED YOU! "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:352
+msgid "We need you, the users of PEP to "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:352
+msgid "pitch in your ideas  "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:352
+msgid ""
+"for the plugin. Based on the number of interested users, we will incorporate "
+"the feature and make it available at a minimal cost. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:368
+msgid "Customize Your Enquiry Form "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:370
+msgid "Flexibility to create your own fields within the enquiry form. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:376
+msgid "Display Enquiry Button On Shop "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:378
+msgid ""
+"Allow visitors to enquire about your products directly from the shop page. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:384
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:403
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:433
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:453
+msgid "Confirm Email-id : "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:395
+msgid "Create a Custom Email Template "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:397
+msgid ""
+"Style and create templates for your enquiry emails from your dashboard. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:417
+msgid "Hide or Replace Add-to-Cart Button "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:419
+msgid ""
+"Replace the add-to-cart button with the enquiry button for your products. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:425
+msgid "Analytics For Your Enquiries "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:427
+msgid ""
+"Get detailed analytics for your enquiries based on products and other "
+"attributes. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:431
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:451
+msgid "Please confirm your feature request"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:445
+msgid "Newsletter Integration With PEP "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:447
+msgid "Get your newsletter plugin integrated seamlessly with PEP. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:495
+msgid "Get A Feature Developed in PEP "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:497
+msgid ""
+"Select a feature you want us to develop and leave us a note about it. We "
+"will get in touch with you and keep you posted on its progress. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:498
+msgid "Need a custom feature developed in PEP ? "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:499
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:511
+msgid "Contact Us "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:509
+msgid "Plugin Development and Customization "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:510
+msgid ""
+"Our area of expertise is WordPress plugins. We specialize in creating "
+"bespoke plugin solutions for your business needs. Our competence with plugin "
+"development and customization has been certified by WordPress biggies like "
+"WooThemes and Event Espresso. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:515
+msgid "Our Premium Plugins "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:518
+msgid "Customer Specific Pricing for WooCommerce "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:520
+msgid ""
+"This simple yet powerful plugin, allows you to set a different price for a "
+"WooCommerce product on a per customer basis. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:522
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:529
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:536
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:543
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:552
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:559
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:566
+msgid "Know more "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:525
+msgid "WooCommerce Custom Product Boxes "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:527
+msgid ""
+"This plugin allows customers, to select and create their own product "
+"bundles, which can be purchased as a single product! "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:532
+msgid "Instagram WooCommerce Integration "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:534
+msgid ""
+"A perfect solution, to create collages using Instagram images, right from "
+"your WooCommerce store. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:539
+msgid "WooCommerce Moodle Integration"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:541
+msgid ""
+"Want to sell Moodle Courses in your WooCommerce store? This plugin allows "
+"you to do the same and much more. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:548
+msgid "WooCommerce Scheduler"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:550
+msgid ""
+"With the WooCommerce Scheduler Plugin, you can manage product availability "
+"as per your business needs."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:555
+msgid "WooCommerce Bookings: Availability Search Widget"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:557
+msgid ""
+"An WooCommerce Bookings plugin extension, which allows customers to search "
+"for Available Bookings on requested dates."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:562
+msgid "Empty Cart Timer for WooCommerce"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:564
+msgid ""
+"Empty Cart Timer for WooCommerce deletes products from the cart after a "
+"certain predefined amount of expiration time. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:572
+msgid "Entire Array of Services "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:573
+msgid ""
+"We specialize in WordPress website development and customization with an "
+"entire range of services under our belt. We have expertise in domains such "
+"as eCommerce, LMS, Event Management System, etc. Explore our services now "
+"and cater to all your WordPress requirements under one roof. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:574
+msgid "View Our Services "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:581
+msgid "[Available in PRO]"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:591
+msgid "Emailing Information"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:594
+msgid " Recipient's Email "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:604
+msgid "Default Subject "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:607
+msgid "Enquiry for a product from "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:609
+msgid " Will be used if the customer does not enter a subject"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:617
+msgid "Form Options"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:620
+msgid "Button-Text for enquiry button"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:629
+msgid "Enquiry Button Location"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:635
+msgid " After single product summary "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:640
+msgid "At the end of single product page "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:648
+msgid "Enable sending an email copy"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:653
+msgid " Enable option on the enquiry form to send an email copy to customer"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:661
+msgid "Display 'Powered by WisdmLabs'"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:674
+msgid "Display 'Telephone Number Field'"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:687
+msgid "Show enquiry button only when product is out of stock"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:698
+msgid "Styling Options"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:702
+msgid "Custom Styling"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:707
+msgid "Use Activated Theme CSS"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:711
+msgid "Manually specify color settings"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:719
+msgid "Specify CSS Settings "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:724
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:737
+msgid ""
+" This feature is available in the PRO version. Click below to know more. "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:725
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:738
+msgid "View Details "
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:743
+msgid "Enable/Disable Add to Cart for all Products"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:749
+msgid "Enable/Disable PEP for all Products"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:755
+msgid "Redirect Page URL"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:845
+msgid "Product Enquiry from"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:846
+msgid "Product Name:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:847
+msgid "Product URL:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:848
+msgid "Customer Name:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:849
+msgid "Customer Email:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:850
+msgid "Message:"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:856
+msgid "Enquiry was sent succesfully"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:861
+msgid "Unfortunately, a server issue prevented delivery of your message."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:866
+msgid "Unauthorized access."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:927
+msgid "And Congrats! They have subscribed to your newsletter too!"
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:928
+msgid "We'll keep you updated with the latest developments."
+msgstr ""
+
+#: /home/sonali/Desktop/product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php:939
+#, php-format
+msgid ""
+"Hi there,Thank you for requesting the %s feature for Product Enquiry for "
+"WooCommerce.We will keep you updated with the latest developments.Thanks and "
+"Regards,WisdmLabs"
+msgstr ""
