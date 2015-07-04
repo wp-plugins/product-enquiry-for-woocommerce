@@ -67,7 +67,10 @@ Yes.
 = Can I display the enquiry button on the shop page? =
 Currently, the button is displayed only on the single product page.
 
-== Upgrade Notice ==
+## Upgrade Notice ##
+
+### 1.0.0 ###
+This is a MAJOR Update.
 The Product Enquiry plugin has been completely revamped and made free of any major bugs. The **button position has been updated** to be displayed below the add to cart button. Take a look at the screenshots.
 
 == Screenshots ==
