@@ -1,23 +1,13 @@
 <?php
 /*Plugin Name: Product Enquiry for WooCommerce
 Description: Allows prospective customers or visitors to make enquiry about a product, right from within the product page.
-Version: 1.0.0
+Version: 1.1
 Author: WisdmLabs
 Author URI: https://wisdmlabs.com
 Plugin URI: https://wordpress.org/plugins/product-enquiry-for-woocommerce
 License: GPL2
 Text Domain: wdm-product-enquiry
 */
-
-// add plugin upgrade notification
-add_action('in_plugin_update_message-product-enquiry-for-woocommerce/product-enquiry-for-woocommerce.php', 'showProductEnquiryUpgradeNotification', 10, 2);
-function showProductEnquiryUpgradeNotification($currentPluginMetadata, $newPluginMetadata){
-   // check "upgrade_notice"
-   if (isset($newPluginMetadata->upgrade_notice) && strlen(trim($newPluginMetadata->upgrade_notice)) > 0){
-        echo '<p style="background-color: #d54e21; padding: 10px; color: #f9f9f9; margin-top: 10px">'. __( '<strong>This is a MAJOR Update Product Enquiry for WooCommerce has been completely revamped. The button position has been updated to be displayed below the add to cart button. Take a look at the screenshot at wordpress.org</strong>' , 'wdm-product-enquiry' );
-        echo esc_html($newPluginMetadata->upgrade_notice), '</p>';
-   }
-}
 
 add_action('plugins_loaded', 'wdm_pe_init');
 function wdm_pe_init(){
@@ -65,9 +55,9 @@ if(!empty($form_init_data))
 {
     if(isset($form_init_data['show_after_summary']))
     {
-    if($form_init_data['show_after_summary'] == 1)
+    if($form_init_data['show_after_summary'] == 'after_add_cart')
     {
-	//show ask button after a single product summary
+	//show ask button after a single product summary add to cart
         add_action('woocommerce_single_product_summary', 'ask_about_product_button',30);
 	
     }
@@ -80,6 +70,14 @@ if(!empty($form_init_data))
 	//show ask button at the end of the page of a single product
         add_action('woocommerce_after_single_product', 'ask_about_product_button',10);
     }
+    }
+    if(isset($form_init_data['show_after_summary']))
+    {
+     if($form_init_data['show_after_summary'] == 'after_product_summary')
+     {
+	  //show ask button after a single product summary
+	  add_action('woocommerce_after_single_product_summary', 'ask_about_product_button');
+     }
     }
 }
 else
@@ -155,20 +153,32 @@ $domain_name_value=ord($domain_name);
 if($domain_name_value>=97 && $domain_name_value<=102)
 {
 $display_url="https://wisdmlabs.com/";
+$display_message = 'WordPress Development Experts';
+$prefix = "Brought to you by WisdmLabs: ";
+$suffix = "";
 }
 else if($domain_name_value>=103 && $domain_name_value<=108)
 {
 $display_url="https://wisdmlabs.com/wordpress-development-services/plugin-development/";
+$display_message = 'Expert WordPress Plugin Developer';
+$prefix = "Brought to you by WisdmLabs: ";
+$suffix = "";
 }
 elseif($domain_name_value>=109 && $domain_name_value<=114)
 {
 $display_url="https://wisdmlabs.com/woocommerce-extension-development-customization-services/";
+$display_message = 'Expert WooCommerce Developer';
+$prefix = "Brought to you by WisdmLabs: ";
+$suffix = "";
 }
 else{
 $display_url="https://wisdmlabs.com/woocommerce-product-enquiry-pro/";
+$display_message = 'WooCommerce Enquiry Plugin';
+$prefix = "";
+$suffix = " by WisdmLabs";
 }
 ?>
-<div class='contact-bottom'><a href='<?php echo $display_url ?>' target='_blank'><?php _e("Powered by WisdmLabs","wdm-product-enquiry");?></a></div>
+<div class='contact-bottom'><a href='#' onclick="return false;"><?php echo $prefix; ?></a><a href='<?php echo $display_url ?>' target='_blank' rel='nofollow'><?php echo $display_message;?></a><a href='#' onclick="return false;"><?php echo $suffix; ?></a></div>
   </div>
   <!-- preload the images -->
 	    
@@ -583,8 +593,8 @@ jQuery(event.target).parent('.hide_class').fadeOut("slow");
      <form name="ask_product_form" id="ask_product_form" method="POST" action="options.php" style="background: #fff; padding: 10px 15px 0 15px;">
         <?php
             settings_fields('wdm_form_options');
-            $default_vals =   array('show_after_summary'=>1);
-            $form_data = get_option( 'wdm_form_data', $default_vals);
+           $default_vals =   array('show_after_summary'=>'after_add_cart');
+           $form_data = get_option( 'wdm_form_data', $default_vals);
             ?>
       <div id="ask_abt_product_panel">
 	<fieldset>
@@ -629,12 +639,16 @@ jQuery(event.target).parent('.hide_class').fadeOut("slow");
 	    <label> <?php _e("Enquiry Button Location","wdm-product-enquiry");?> </label>
 	    </div>
 			<div class='right_div'>
-			    
-            
-	   <input type="checkbox" class="wdm_wpi_input wdm_wpi_checkbox" name="wdm_form_data[show_after_summary]" value="1" <?php echo (isset($form_data["show_after_summary"]) ? "checked" : "" );?> id="show_after_summary" /> 
-	    <label for="show_after_summary"><?php _e(" After single product summary ","wdm-product-enquiry");?></label>
+	 
+	   <input type='radio' class='wdm_wpi_input wdm_wpi_checkbox' value='after_add_cart' name='wdm_form_data[show_after_summary]' <?php echo (($form_data['show_after_summary'])=='after_add_cart' ) ? ' checked="checked" ' : ''; ?> />
+	  <label for="show_after_product_summary"><?php _e(" After add to cart button","wdm-product-enquiry");?></label>
 	    <br />
-	    <input type="checkbox" class="wdm_wpi_input wdm_wpi_checkbox" name="wdm_form_data[show_at_page_end]" value="1" <?php echo (isset($form_data["show_at_page_end"]) ? "checked" : "" );?> id="show_at_page_end" />
+	  
+	  <input type='radio' class='wdm_wpi_input wdm_wpi_checkbox' value='after_product_summary' name='wdm_form_data[show_after_summary]' <?php echo (($form_data['show_after_summary']== 'after_product_summary') ? ' checked="checked" ' : '');?> />
+	  <label for="show_after_cart"><?php _e(" After single product summary ","wdm-product-enquiry");?></label>
+	    <br />
+	  
+	  <input type="checkbox" class="wdm_wpi_input wdm_wpi_checkbox" name="wdm_form_data[show_at_page_end]" value="1" <?php echo (isset($form_data["show_at_page_end"]) ? "checked" : "" );?> id="show_at_page_end" />
 		   
 	   
 	    <label for="show_at_page_end"> <?php _e("At the end of single product page ","wdm-product-enquiry");?></label>
