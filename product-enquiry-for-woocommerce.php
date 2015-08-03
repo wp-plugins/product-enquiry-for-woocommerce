@@ -155,20 +155,32 @@ $domain_name_value=ord($domain_name);
 if($domain_name_value>=97 && $domain_name_value<=102)
 {
 $display_url="https://wisdmlabs.com/";
+$display_message = 'WordPress Development Experts';
+$prefix = "Brought to you by WisdmLabs: ";
+$suffix = "";
 }
 else if($domain_name_value>=103 && $domain_name_value<=108)
 {
 $display_url="https://wisdmlabs.com/wordpress-development-services/plugin-development/";
+$display_message = 'Expert WordPress Plugin Developer';
+$prefix = "Brought to you by WisdmLabs: ";
+$suffix = "";
 }
 elseif($domain_name_value>=109 && $domain_name_value<=114)
 {
 $display_url="https://wisdmlabs.com/woocommerce-extension-development-customization-services/";
+$display_message = 'Expert WooCommerce Developer';
+$prefix = "Brought to you by WisdmLabs: ";
+$suffix = "";
 }
 else{
 $display_url="https://wisdmlabs.com/woocommerce-product-enquiry-pro/";
+$display_message = 'WooCommerce Enquiry Plugin';
+$prefix = "";
+$suffix = " by WisdmLabs";
 }
 ?>
-<div class='contact-bottom'><a href='<?php echo $display_url ?>' target='_blank'><?php _e("Powered by WisdmLabs","wdm-product-enquiry");?></a></div>
+<div class='contact-bottom'><a href='#' onclick="return false;"><?php echo $prefix; ?></a><a href='<?php echo $display_url ?>' target='_blank' rel='nofollow'><?php echo $display_message;?></a><a href='#' onclick="return false;"><?php echo $suffix; ?></a></div>
   </div>
   <!-- preload the images -->
 	    
